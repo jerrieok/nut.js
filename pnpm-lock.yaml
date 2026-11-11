@@ -150,18 +150,37 @@ importers:
       '@nut-tree/libnut':
         specifier: workspace:*
         version: link:../libnut
+      '@nut-tree/libnut-darwin':
+        specifier: 2.7.1
+        version: 2.7.1
+      '@nut-tree/libnut-linux':
+        specifier: 2.7.1
+        version: 2.7.1
+      '@nut-tree/libnut-win32':
+        specifier: 2.7.1
+        version: 2.7.1
       '@nut-tree/provider-interfaces':
         specifier: workspace:*
         version: link:../provider-interfaces
       '@nut-tree/shared':
         specifier: workspace:*
         version: link:../shared
+      bindings:
+        specifier: 1.5.0
+        version: 1.5.0
+      clipboardy:
+        specifier: 2.3.0
+        version: 2.3.0
       jimp:
         specifier: 0.22.10
         version: 0.22.10
       node-abort-controller:
         specifier: 3.1.1
         version: 3.1.1
+    optionalDependencies:
+      '@nut-tree/node-mac-permissions':
+        specifier: 2.2.1
+        version: 2.2.1
     devDependencies:
       '@nut-tree/configs':
         specifier: workspace:*

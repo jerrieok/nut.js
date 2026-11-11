@@ -59,11 +59,29 @@
   "dependencies": {
     "@nut-tree/default-clipboard-provider": "workspace:*",
     "@nut-tree/libnut": "workspace:*",
-    "@nut-tree/shared": "workspace:*",
+    "@nut-tree/libnut-darwin": "2.7.1",
+    "@nut-tree/libnut-linux": "2.7.1",
+    "@nut-tree/libnut-win32": "2.7.1",
     "@nut-tree/provider-interfaces": "workspace:*",
+    "@nut-tree/shared": "workspace:*",
+    "bindings": "1.5.0",
+    "clipboardy": "2.3.0",
     "jimp": "0.22.10",
     "node-abort-controller": "3.1.1"
   },
+  "optionalDependencies": {
+    "@nut-tree/node-mac-permissions": "2.2.1"
+  },
+  "bundledDependencies": [
+    "@nut-tree/default-clipboard-provider",
+    "@nut-tree/libnut",
+    "@nut-tree/libnut-darwin",
+    "@nut-tree/libnut-linux",
+    "@nut-tree/libnut-win32",
+    "@nut-tree/node-mac-permissions",
+    "@nut-tree/provider-interfaces",
+    "@nut-tree/shared"
+  ],
   "devDependencies": {
     "@nut-tree/configs": "workspace:*"
   },
