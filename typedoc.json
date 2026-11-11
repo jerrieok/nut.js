@@ -2,9 +2,9 @@
   "$schema": "https://typedoc.org/schema.json",
   "entryPointStrategy": "packages",
   "entryPoints": [
-    "core/nut.js",
-    "core/provider-interfaces",
-    "core/shared"
+    "packages/nut.js",
+    "packages/provider-interfaces",
+    "packages/shared"
   ],
   "includeVersion": false
 }

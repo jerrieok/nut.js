@@ -1,5 +1,4 @@
 packages:
-  - 'core/*'
-  - 'providers/*'
-  - 'examples/*'
-  - 'e2e/*'
+  - "packages/*"
+  - "examples/*"
+  - "e2e/*"
