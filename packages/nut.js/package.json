@@ -1,5 +1,5 @@
 {
-  "name": "@nut-tree/nut-js",
+  "name": "@jerrieok/nut-js",
   "version": "4.2.0",
   "license": "Apache-2.0",
   "main": "dist/index",

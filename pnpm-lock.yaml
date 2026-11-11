@@ -45,61 +45,11 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
 
-  core/configs: {}
-
-  core/nut.js:
-    dependencies:
-      '@nut-tree/default-clipboard-provider':
-        specifier: workspace:*
-        version: link:../../providers/clipboardy
-      '@nut-tree/libnut':
-        specifier: workspace:*
-        version: link:../../providers/libnut
-      '@nut-tree/provider-interfaces':
-        specifier: workspace:*
-        version: link:../provider-interfaces
-      '@nut-tree/shared':
-        specifier: workspace:*
-        version: link:../shared
-      jimp:
-        specifier: 0.22.10
-        version: 0.22.10
-      node-abort-controller:
-        specifier: 3.1.1
-        version: 3.1.1
-    devDependencies:
-      '@nut-tree/configs':
-        specifier: workspace:*
-        version: link:../configs
-
-  core/provider-interfaces:
-    dependencies:
-      '@nut-tree/shared':
-        specifier: workspace:*
-        version: link:../shared
-    devDependencies:
-      '@nut-tree/configs':
-        specifier: workspace:*
-        version: link:../configs
-
-  core/shared:
-    dependencies:
-      jimp:
-        specifier: 0.22.10
-        version: 0.22.10
-      node-abort-controller:
-        specifier: 3.1.1
-        version: 3.1.1
-    devDependencies:
-      '@nut-tree/configs':
-        specifier: workspace:*
-        version: link:../configs
-
   e2e/window-test:
     devDependencies:
       '@nut-tree/nut-js':
-        specifier: workspace:*
-        version: link:../../core/nut.js
+        specifier: workspace:@jerrieok/nut-js@*
+        version: link:../../packages/nut.js
       '@playwright/test':
         specifier: 1.41.2
         version: 1.41.2
@@ -119,14 +69,14 @@ importers:
   examples/jest-test:
     dependencies:
       '@nut-tree/nut-js':
-        specifier: workspace:*
-        version: link:../../core/nut.js
+        specifier: workspace:@jerrieok/nut-js@*
+        version: link:../../packages/nut.js
 
   examples/keyboard-test:
     dependencies:
       '@nut-tree/nut-js':
-        specifier: workspace:*
-        version: link:../../core/nut.js
+        specifier: workspace:@jerrieok/nut-js@*
+        version: link:../../packages/nut.js
       run-script-os:
         specifier: ^1.1.6
         version: 1.1.6
@@ -134,25 +84,22 @@ importers:
   examples/mouse-test:
     dependencies:
       '@nut-tree/nut-js':
-        specifier: workspace:*
-        version: link:../../core/nut.js
+        specifier: workspace:@jerrieok/nut-js@*
+        version: link:../../packages/nut.js
 
   examples/screen-test:
     dependencies:
-      '@nut-tree/nl-matcher':
-        specifier: 2.2.0
-        version: 2.2.0(@nut-tree/nut-js@core+nut.js)
       '@nut-tree/nut-js':
-        specifier: workspace:*
-        version: link:../../core/nut.js
+        specifier: workspace:@jerrieok/nut-js@*
+        version: link:../../packages/nut.js
 
   examples/typescript-test:
     dependencies:
       '@nut-tree/nut-js':
-        specifier: workspace:*
-        version: link:../../core/nut.js
+        specifier: workspace:@jerrieok/nut-js@*
+        version: link:../../packages/nut.js
 
-  providers/clipboardy:
+  packages/clipboardy:
     dependencies:
       '@nut-tree/nut-js':
         specifier: ^3
@@ -163,12 +110,14 @@ importers:
     devDependencies:
       '@nut-tree/configs':
         specifier: workspace:*
-        version: link:../../core/configs
+        version: link:../configs
       '@nut-tree/provider-interfaces':
         specifier: workspace:*
-        version: link:../../core/provider-interfaces
+        version: link:../provider-interfaces
 
-  providers/libnut:
+  packages/configs: {}
+
+  packages/libnut:
     dependencies:
       '@nut-tree/libnut-darwin':
         specifier: 2.7.1
@@ -185,13 +134,61 @@ importers:
     devDependencies:
       '@nut-tree/configs':
         specifier: workspace:*
-        version: link:../../core/configs
+        version: link:../configs
       '@nut-tree/provider-interfaces':
         specifier: workspace:*
-        version: link:../../core/provider-interfaces
+        version: link:../provider-interfaces
       '@nut-tree/shared':
         specifier: workspace:*
-        version: link:../../core/shared
+        version: link:../shared
+
+  packages/nut.js:
+    dependencies:
+      '@nut-tree/default-clipboard-provider':
+        specifier: workspace:*
+        version: link:../clipboardy
+      '@nut-tree/libnut':
+        specifier: workspace:*
+        version: link:../libnut
+      '@nut-tree/provider-interfaces':
+        specifier: workspace:*
+        version: link:../provider-interfaces
+      '@nut-tree/shared':
+        specifier: workspace:*
+        version: link:../shared
+      jimp:
+        specifier: 0.22.10
+        version: 0.22.10
+      node-abort-controller:
+        specifier: 3.1.1
+        version: 3.1.1
+    devDependencies:
+      '@nut-tree/configs':
+        specifier: workspace:*
+        version: link:../configs
+
+  packages/provider-interfaces:
+    dependencies:
+      '@nut-tree/shared':
+        specifier: workspace:*
+        version: link:../shared
+    devDependencies:
+      '@nut-tree/configs':
+        specifier: workspace:*
+        version: link:../configs
+
+  packages/shared:
+    dependencies:
+      jimp:
+        specifier: 0.22.10
+        version: 0.22.10
+      node-abort-controller:
+        specifier: 3.1.1
+        version: 3.1.1
+    devDependencies:
+      '@nut-tree/configs':
+        specifier: workspace:*
+        version: link:../configs
 
 packages:
 
@@ -1646,42 +1643,6 @@ packages:
       '@nut-tree/libnut-darwin': 2.5.2
       '@nut-tree/libnut-linux': 2.5.2
       '@nut-tree/libnut-win32': 2.5.2
-    dev: false
-
-  /@nut-tree/nl-matcher-darwin@2.2.0:
-    resolution: {integrity: sha512-dIVEhcMYCgWMUkAvH1FLkgR0NnQFocn8CS+5mWOzu/+CCOhMXbM1tPgnSNFtdmgrrtp8fU6IoKCRmjV43gzuzw==}
-    cpu: [x64, arm64]
-    os: [darwin, linux, win32]
-    dependencies:
-      bindings: 1.5.0
-    dev: false
-
-  /@nut-tree/nl-matcher-linux@2.2.0:
-    resolution: {integrity: sha512-SnUOMAxiqSE7UMmb5BzWYveQKKYbrl/2JwKNGN/9lyWsVjtPR84mYs4qYfF7USd6LYz/0niUSCHNt+TOx9fuJA==}
-    cpu: [x64, arm64]
-    os: [darwin, linux, win32]
-    dependencies:
-      bindings: 1.5.0
-    dev: false
-
-  /@nut-tree/nl-matcher-win32@2.2.0:
-    resolution: {integrity: sha512-aX5oHjgJVkGMOwsFbWslAA7pMPhmodO0eUkXe76W2QusKhEkictIwcFIotlCgRSJl/Z2qQ8dXjAJgtNcR7RpdA==}
-    cpu: [x64, arm64]
-    os: [darwin, linux, win32]
-    dependencies:
-      bindings: 1.5.0
-    dev: false
-
-  /@nut-tree/nl-matcher@2.2.0(@nut-tree/nut-js@core+nut.js):
-    resolution: {integrity: sha512-vpZzA67eXS6FXf446GCH7TycuO23qQdlHym8WKcQzKi59j8OQFWZTW5+mg13P9q/6m2SOrEMoGeUttMWCCjlBQ==}
-    engines: {node: '>=10.15.3'}
-    peerDependencies:
-      '@nut-tree/nut-js': '>=3.0.0'
-    dependencies:
-      '@nut-tree/nl-matcher-darwin': 2.2.0
-      '@nut-tree/nl-matcher-linux': 2.2.0
-      '@nut-tree/nl-matcher-win32': 2.2.0
-      '@nut-tree/nut-js': link:core/nut.js
     dev: false
 
   /@nut-tree/node-mac-permissions@2.2.1:
@@ -4477,6 +4438,7 @@ packages:
 
   /phin@2.9.3:
     resolution: {integrity: sha512-CzFr90qM24ju5f88quFC/6qohjC144rehe5n6DH900lgXmUe86+xCKc10ev56gRKC4/BkHUoG4uSiQgBiIXwDA==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     dev: false
 
   /picocolors@1.0.0:

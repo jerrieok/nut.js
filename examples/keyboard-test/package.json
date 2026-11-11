@@ -15,7 +15,7 @@
     "test:default": "echo 'No keyboard tests for current platform'"
   },
   "dependencies": {
-    "@nut-tree/nut-js": "workspace:*",
+    "@nut-tree/nut-js": "workspace:@jerrieok/nut-js@*",
     "run-script-os": "^1.1.6"
   }
 }

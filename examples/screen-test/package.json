@@ -13,7 +13,6 @@
     "test": "jest --runInBand"
   },
   "dependencies": {
-    "@nut-tree/nut-js": "workspace:*",
-    "@nut-tree/nl-matcher": "2.2.0"
+    "@nut-tree/nut-js": "workspace:@jerrieok/nut-js@*"
   }
 }

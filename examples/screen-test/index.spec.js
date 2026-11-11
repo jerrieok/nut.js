@@ -1,7 +1,6 @@
 "use strict";
 
 const { screen, Region, imageResource } = require("@nut-tree/nut-js");
-require("@nut-tree/nl-matcher");
 
 describe("Screen test", () => {
   describe("dimensions", () => {
